@@ -1,24 +1,24 @@
+using Todo.Domain.Entities;
 using Todo.Domain.Interfaces;
-using Task = Todo.Domain.Entities.Task;
 
 namespace Todo.Infrastructure.Repositories;
 
 public class TaskRepository : ITaskRepository
 {
-    private readonly List<Task> _tasks = [];
+    private readonly List<TaskEntity> _tasks = [];
 
-    public Task GetById(int id)
+    public TaskEntity GetById(int id)
     {
         return _tasks.FirstOrDefault(t => t.Id == id) ?? throw new InvalidOperationException();
     }
 
-    public void Save(Task task)
+    public void Save(TaskEntity taskEntity)
     {
         // Simulated saving to a datastore
-        _tasks.Add(task);
+        _tasks.Add(taskEntity);
     }
 
-    public IEnumerable<Task> GetAll()
+    public IEnumerable<TaskEntity> GetAll()
     {
         return _tasks;
     }

@@ -1,12 +1,12 @@
+using Todo.Domain.Entities;
 using Todo.Domain.Interfaces;
-using Task = Todo.Domain.Entities.Task;
 
 namespace Todo.Application.UseCases;
 
 public class AddTaskUseCase(ITaskRepository taskRepository)
 {
-    public void Execute(Task task)
+    public void Execute(TaskEntity taskEntity)
     {
-        taskRepository.Save(task);
+        taskRepository.Save(taskEntity);
     }
 }

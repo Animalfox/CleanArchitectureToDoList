@@ -1,6 +1,6 @@
 ﻿using Todo.Application.UseCases;
+using Todo.Domain.Entities;
 using Todo.Infrastructure.Repositories;
-using Task = Todo.Domain.Entities.Task;
 
 var taskRepository = new TaskRepository();
 var addTaskUseCase = new AddTaskUseCase(taskRepository);
@@ -8,7 +8,7 @@ var viewAllTasksUseCase = new ViewAllTasksUseCase(taskRepository);
 
 // Пример использования
 Console.WriteLine("Добавление новой задачи:");
-var newTask = new Task
+var newTask = new TaskEntity
 {
     Id = 1,
     Title = "Почистить код",

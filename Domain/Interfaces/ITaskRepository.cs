@@ -1,10 +1,10 @@
-using Task = Todo.Domain.Entities.Task;
+using Todo.Domain.Entities;
 
 namespace Todo.Domain.Interfaces;
 
 public interface ITaskRepository
 {
-    Task GetById(int id);
-    void Save(Task task);
-    IEnumerable<Task> GetAll();
+    TaskEntity GetById(int id);
+    void Save(TaskEntity taskEntity);
+    IEnumerable<TaskEntity> GetAll();
 }
