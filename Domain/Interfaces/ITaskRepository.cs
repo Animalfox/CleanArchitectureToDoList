@@ -1,3 +1,5 @@
+using Task = Todo.Domain.Entities.Task;
+
 namespace Todo.Domain.Interfaces;
 
 public interface ITaskRepository

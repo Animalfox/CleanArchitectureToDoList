@@ -1,4 +1,5 @@
 using Todo.Domain.Interfaces;
+using Task = Todo.Domain.Entities.Task;
 
 namespace Todo.Application.UseCases;
 
